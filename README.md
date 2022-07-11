@@ -1,1 +1,2 @@
-# Sbtl-Clothing
+# .sbtlClothing
+Clothing Store
