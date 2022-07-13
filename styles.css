@@ -23,7 +23,7 @@ nav ul {
 
 nav li {
   color: black;
-  font-size: 18px;
+  font-size: 15px;
   padding: 20px;
 }
 
@@ -101,21 +101,45 @@ button:hover{
 }
 
 .img-container{
-  position: relative;
+  max-width: 100%;
+  padding-top: 50px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-  gap: 100px;
+  gap: 80px;
 }
 
-.img-container img{
-  max-width: 500px;
+.img-card{
+  max-width: 505px;
 }
 
-.img-container img:hover{
-  opacity: 0.3;
-  transition-duration: 1s;
-  cursor: pointer;
+.img-card h3{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  padding-top: 5px;
+  padding-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.img-card p{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+}
+
+.img-card img {
+  max-width: 300px;
+}
+
+i{
+  padding-top: 25px;
+  padding-bottom: 15px;
+}
+
+span{
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
 }
 
 
@@ -134,8 +158,14 @@ button:hover{
 @media only screen and (max-width: 1000px){
 
   nav ul {
-    display: flex;
-    justify-content: center;
+    display: block;
+    text-align: center;
+    padding-top: 10px;
+    padding-right: 0;
+  }
+
+  nav li {
+    padding: 2px;
   }
   .main-container{
     flex-wrap: wrap;
@@ -152,13 +182,16 @@ button:hover{
 
   .left-card{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
   .img-container{
+    display: flex;
     flex-wrap: wrap;
   }
+
 
   .middle-body .img-container img{
     max-width: 390px;
