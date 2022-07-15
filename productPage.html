@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Font Awesome Import -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
   <!-- Google Font Import -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,40 +15,119 @@
   <link rel="stylesheet" href="./productStyles.css">
   <title>Everything will be Bouquet</title>
 </head>
+
 <body>
   <header>
     <!-- <h3 class="logo">.sbtl</h3> -->
+    
     <nav>
+      <div class="logo">
+        <img src="./img/sbtl Futura Black.png" alt="">
+      </div>
       <ul>
-        <a href="./index.html"><li>Home</li></a>
-        <a href="#"><li>About</li></a>
-        <a href="#"><li>Contact</li></a>
-        <a href="#"><li>Cart</li></a>
+        <a href="./index.html">
+          <li>Home</li>
+        </a>
+        <a href="#">
+          <li>About</li>
+        </a>
+        <a href="#">
+          <li>Contact</li>
+        </a>
+        <a href="#">
+          <li>Cart</li>
+        </a>
       </ul>
     </nav>
+
   </header>
 
   <section>
-    <div class="main-container">
-      <img id="mainImage" src="./img/Everything Front POCKET.jpg" alt="">
-      <div class="left-card">
-        <h1>Everything will <br> be bouquet <br> Tee</h1>
-        <div class="text-container">
-        <p>- 100% Cotton Tee</p>
-        <p>- Hand Screen Printed</p>
-        <p>- Locally Made</p>
-      </div>
 
-        <button class="btn">Buy Now</button>
+    <div class="product-container">
+      <div class="grid-column">
+        <img src="./img/Everything-Front-POCKET-for-WEB.jpg" alt="">
+
+        <div class="product-description">
+          <h1>Everything will<br> be bouquet<br> Tee</h1>
+          <div class="text-container">
+            <p>- 100% Cotton Tee</p>
+            <p>- Hand Screen Printed</p>
+            <p>- Locally Made</p>
+            <i class="fa fa-star fa-xs" aria-hidden="true"></i>
+            <i class="fa fa-star fa-xs" aria-hidden="true"></i>
+            <i class="fa fa-star fa-xs" aria-hidden="true"></i>
+            <i class="fa fa-star fa-xs" aria-hidden="true"></i>
+            <i class="fa fa-star fa-xs" aria-hidden="true"></i>
+            <span>R 200.00</span>
+            <button class="btn">Add to Cart</button>
+          </div>
+        </div>
         <div class="thumbnails">
           <img id="change" onclick="change()" src="./img/Everything Front POCKET.jpg" alt="">
           <img onclick="change()" id="thumbnail2" src="./img/Design3.jpg" alt="">
         </div>
       </div>
     </div>
-    
+  </div>
+  </section>
+    <!-- OTHER PRODUCTS SECTION -->
+
+  <section>
+    <div class="middle-body">
+      <div class="middle-heading">
+        <h2>Shop the collection</h2>
+      </div>
+      <div class="img-container">
+        <div class="img-card">
+          <img src="./img/Everything-Front-POCKET-for-WEB.jpg" alt="">
+          <h3>Bouquet T-Shirt</h3>
+          <p>100% Cotton Fitted Tee</p>
+          <i class="fa fa-star fa-xs" aria-hidden="true"></i>
+          <i class="fa fa-star fa-xs" aria-hidden="true"></i>
+          <i class="fa fa-star fa-xs" aria-hidden="true"></i>
+          <i class="fa fa-star fa-xs" aria-hidden="true"></i>
+          <i class="fa fa-star fa-xs" aria-hidden="true"></i>
+          <span>R 200.00</span>
+        </div>
+        <div class="img-card">
+          <img src="./img/Design1.jpg" alt="">
+          <h3>Dictionary T-Shirt</h3>
+          <p>100% Cotton Fitted Tee</p>
+          <i class="fa fa-star fa-xs" aria-hidden="true"></i>
+          <i class="fa fa-star fa-xs" aria-hidden="true"></i>
+          <i class="fa fa-star fa-xs" aria-hidden="true"></i>
+          <i class="fa fa-star fa-xs" aria-hidden="true"></i>
+          <i class="fa fa-star fa-xs" aria-hidden="true"></i>
+          <span>R 200.00</span>
+        </div>
+        <div class="img-card">
+          <img src="./img/Design2.jpg" alt="">
+          <h3>Be Fearless T-Shirt</h3>
+          <p>100% Cotton Fitted Tee</p>
+          <i class="fa fa-star fa-xs" aria-hidden="true"></i>
+          <i class="fa fa-star fa-xs" aria-hidden="true"></i>
+          <i class="fa fa-star fa-xs" aria-hidden="true"></i>
+          <i class="fa fa-star fa-xs" aria-hidden="true"></i>
+          <i class="fa fa-star fa-xs" aria-hidden="true"></i>
+          <span>R 200.00</span>
+        </div>
+        <div class="img-card">
+          <img src="./img/Sell-your-Soul-Design.jpg" alt="">
+          <h3>Sell Your Soul T-Shirt</h3>
+          <p>100% Cotton Fitted Tee</p>
+          <i class="fa fa-star fa-xs" aria-hidden="true"></i>
+          <i class="fa fa-star fa-xs" aria-hidden="true"></i>
+          <i class="fa fa-star fa-xs" aria-hidden="true"></i>
+          <i class="fa fa-star fa-xs" aria-hidden="true"></i>
+          <i class="fa fa-star fa-xs" aria-hidden="true"></i>
+          <span>R 200.00</span>
+        </div>
+      </div>
+    </div>
   </section>
 
   <script src="./product.js"></script>
 </body>
+
 </html>
