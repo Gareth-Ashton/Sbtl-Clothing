@@ -155,7 +155,7 @@ span{
 
 /* MEDIA QUERY RESPONSIVE SECTION */
 
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 850px){
 
   nav ul {
     display: block;
@@ -173,11 +173,13 @@ span{
   }
   .main-container h1{
     font-size: 55px;
+    display: block;
+    align-items: center;
     text-align: center;
   }
 
   .main-container img{
-    max-width: 390px;
+    max-width: 350px;
   }
 
   .left-card{
@@ -226,5 +228,6 @@ span{
   }
   
   }
+
 
  
