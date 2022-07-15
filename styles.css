@@ -155,7 +155,7 @@ span{
 
 /* MEDIA QUERY RESPONSIVE SECTION */
 
-@media only screen and (max-width: 1000px){
+@media only screen and (max-width: 768px){
 
   nav ul {
     display: block;
@@ -188,14 +188,43 @@ span{
     align-items: center;
   }
   .img-container{
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, 170px);
+    column-gap: 10px;
+  }
+  .img-card{
+    margin: 0;
+  }
+
+  .img-card p {
+    padding-left: 2px;
+    font-size: 12px;
+  }
+
+  .img-card h3{
+    padding-left: 2px;
+    font-size: 9px;
+    padding-top: 5px;
+    padding-bottom: 8px;
+    text-transform: uppercase;
+  }
+
+  i{
+    padding-left: 2px;
+  }
+
+  span{
+    padding-left: 2px;
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
   }
 
 
-  .middle-body .img-container img{
-    max-width: 390px;
+  .img-card img {
+    max-width: 170px;
   }
+  
   }
 
  
