@@ -5,9 +5,9 @@
 }
 
 .logo {
-  padding-top: 20px;
+  padding: 10px;
   display: flex;
-  justify-content: center;
+  
 }
 
 .logo img {
@@ -15,6 +15,9 @@
 }
 
 nav {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
   max-width: 100%;
   font-family: 'Montserrat', sans-serif;
   background-color: rgb(243, 243, 243);
@@ -24,11 +27,13 @@ nav ul {
   list-style-type: none;
   display: flex;
   justify-content: flex-end;
-  align-items: center;
   padding-right: 20px;
 }
 
 nav li {
+  display: inline-block;
+  display: flex;
+  justify-content: flex-end;
   color: black;
   font-size: 15px;
   padding: 20px;
@@ -38,10 +43,23 @@ nav a {
   text-decoration: none;
 }
 
-i.fa.fa-bars{
+.hamburger{
+  background-color: transparent;
+  border: none;
+  color: black;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+}
+
+.hamburger:focus{
+  outline: none;
+}
+
+/* i.fa.fa-bars{
   color: black;
   padding: 0px;
-}
+} */
 
 /* <---------- END OF NAV ----------> */
 
@@ -206,31 +224,54 @@ i {
 
 /* <---------- RESPONSIVE SECTION ----------> */
 
+@media screen and (max-width: 767px){
+  nav .logo{
+    padding: 10px;
+  }
+  
+  .nav-ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-ul.show{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+  }
+
+  .hamburger{
+    display: block;
+    padding-right: 20px;
+    color: black;
+    font-size: 15px;
+  }
+
+  nav li{
+    font-size: 12px;
+    padding: 2px;
+  }
+}
+
+
+
+
 /* <----------- MEDIA QUERY FOR 390PX SCREENS -----------> */
-
-
 @media only screen and (max-width:575px){ 
 
   /* ANYTHING UPTO 575px WONT DISPLAY THE NAV BAR */
-  nav ul li {
+  /* .nav-ul {
     display: none;
-  }
+  } */
 
-  i.fa.fa-bars{
-    color: black;
-    padding-top: 20px;
-    padding-right: 20px;
-  }
+ 
 
 }
 
 
 
 @media screen and (orientation: portrait), screen and (max-width: 390px) {
-  .logo {
-    display: none;
-  }
-
  
   nav{
     padding-top:3px
@@ -293,9 +334,10 @@ i {
     padding-bottom: 0px;
   }
 
-  .text-container .main-price {
+  .text-container .main-price{
+    padding-top: 5px;
+    padding-bottom: 5px;
     font-size: 10px;
-    padding: 0px;
   }
 
   .thumbnails {
@@ -318,13 +360,6 @@ i {
 /* <----------- MEDIA QUERY FOR 576PX SCREENS -----------> */
 
 @media only screen and (min-width: 576px) {
-  .logo {
-    display: none;
-  }
-
-  i.fa.fa-bars{
-    display: none;
-  }
 
   .product-container {
     display: grid;
@@ -359,7 +394,7 @@ i {
   }
 
   .product-description {
-    
+    padding-left: 30px;
     padding-top: 45px;
   }
 
@@ -377,6 +412,11 @@ i {
   i {
     padding-top: 15px;
     padding-bottom: 0px;
+  }
+
+  .text-container .main-price{
+    padding-top: 5px;
+    font-size: 15px;
   }
 
   span {
@@ -401,11 +441,8 @@ i {
 
 /* <----------- MEDIA QUERY FOR 768PX SCREENS -----------> */
 
-@media only screen and (min-width: 768px) {
-  .logo {
-    display: none;
-  }
-
+/* @media only screen and (min-width: 768px) {
+ 
   .product-container {
     display: grid;
     justify-content: center;
@@ -414,6 +451,7 @@ i {
   }
 
   .product-description {
+    padding-left: 30px;
     max-width: 100%;
   }
 
@@ -457,10 +495,12 @@ i {
     padding-bottom: 0px;
   }
 
-  span {
-    font-size: 1px;
-    padding: 0px;
+  .text-container .main-price{
+    padding-top: 8px;
+    padding-bottom: 10px;
+    font-size: 17px;
   }
+ 
   .thumbnails {
     display: flex;
     justify-content: flex-start;
@@ -471,7 +511,7 @@ i {
   .product-container .thumbnails img {
     max-width: 90px;
   }
-}
+} */
 
 
 
@@ -490,6 +530,7 @@ i {
   }
 
   .product-description {
+    padding-left: 30px;
     max-width: 100%;
   }
 
