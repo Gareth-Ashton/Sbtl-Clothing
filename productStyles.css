@@ -68,10 +68,9 @@ i.fa.fa-bars{
   column-gap: 50px;
 }
 
-/* .grid-column img {
+.grid-column .display-img {
   max-width: 600px;
-} */
-
+} 
 
 .text-container {
   padding-bottom: 20px;
