@@ -38,6 +38,11 @@ nav a {
   text-decoration: none;
 }
 
+i.fa.fa-bars{
+  color: black;
+  padding: 0px;
+}
+
 /* <---------- END OF NAV ----------> */
 
 .product-container {
@@ -45,6 +50,13 @@ nav a {
   max-width: 100%;
   padding-top: 10px;
   background-color: rgb(243, 243, 243);
+}
+
+.product-description h1 {
+  font-size: 5rem;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  padding-bottom: 20px;
 }
 
 .grid-column {
@@ -56,16 +68,10 @@ nav a {
   column-gap: 50px;
 }
 
-.grid-column img {
+/* .grid-column img {
   max-width: 600px;
-}
+} */
 
-.product-description h1 {
-  font-size: 3rem;
-  font-family: 'Montserrat', sans-serif;
-  text-transform: uppercase;
-  padding-bottom: 20px;
-}
 
 .text-container {
   padding-bottom: 20px;
@@ -179,9 +185,10 @@ i {
 .product-description span {
   display: block;
   font-family: 'Montserrat', sans-serif;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 600;
 }
+
 
 
 
@@ -198,12 +205,40 @@ i {
 
 /* <----------- MEDIA QUERY FOR 390PX SCREENS -----------> */
 
+
+@media only screen and (max-width:575px){ 
+
+  /* ANYTHING UPTO 575px WONT DISPLAY THE NAV BAR */
+  nav ul li {
+    display: none;
+  }
+
+  i.fa.fa-bars{
+    color: black;
+    padding-top: 20px;
+    padding-right: 20px;
+  }
+
+}
+
+
+
 @media screen and (orientation: portrait), screen and (max-width: 390px) {
   .logo {
     display: none;
   }
 
+ 
+  nav{
+    padding-top:3px
+  }
+  
+  nav ul{
+    padding: 0;
+  }
+
   .product-container {
+    padding: 0;
     display: grid;
     justify-content: center;
     max-width: 100%;
@@ -222,7 +257,9 @@ i {
   }
 
   .grid-column img {
-    max-width: 180px;
+    object-fit: cover;
+    max-width: 100%;
+    Height: 80%;
   }
 
 
@@ -259,18 +296,15 @@ i {
 
   .thumbnails {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 10px;
     padding-top: 0px;
   }
 
   .product-container .thumbnails img {
-    max-width: 70px;
+    max-width: 60px;
   }
 }
-
-
-
 
 
 
@@ -281,6 +315,10 @@ i {
 
 @media only screen and (min-width: 576px) {
   .logo {
+    display: none;
+  }
+
+  i.fa.fa-bars{
     display: none;
   }
 
@@ -302,8 +340,11 @@ i {
     column-gap: 10px;
   }
 
-  .grid-column img {
-    max-width: 288px;
+  .grid-column .display-img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    max-height: 100%;
   }
 
 
@@ -337,6 +378,17 @@ i {
     font-size: 1px;
     padding: 0px;
   }
+
+  .thumbnails {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    padding-top: 0px;
+  }
+
+  .product-container .thumbnails img {
+    max-width: 80px;
+  }
 }
 
 
@@ -367,14 +419,17 @@ i {
     column-gap: 10px;
   }
 
-  .grid-column img {
-    max-width: 384px;
+  .grid-column .display-img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    max-height: 100%;
   }
 
   .btn {
-    width: 3.8rem;
-    height: 1.3rem;
-    font-size: 0.5rem;
+    width: 4.4rem;
+    height: 2rem;
+    font-size: 0.6rem;
   }
 
   .product-description {
@@ -400,6 +455,16 @@ i {
   span {
     font-size: 1px;
     padding: 0px;
+  }
+  .thumbnails {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    padding-top: 0px;
+  }
+
+  .product-container .thumbnails img {
+    max-width: 90px;
   }
 }
 
@@ -431,14 +496,17 @@ i {
     column-gap: 10px;
   }
 
-  .grid-column img {
-    max-width: 496px;
+  .grid-column .display-img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    max-height: 100%;
   }
 
   .btn {
-    width: 3.8rem;
-    height: 1.3rem;
-    font-size: 0.5rem;
+    width: 4.4rem;
+    height: 2rem;
+    font-size: 0.6rem;
   }
 
   .product-description {
@@ -465,6 +533,16 @@ i {
     font-size: 1px;
     padding: 0px;
   }
+  .thumbnails {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    padding-top: 0px;
+  }
+
+  .product-container .thumbnails img {
+    max-width: 100px;
+  }
 }
 
 
@@ -484,25 +562,29 @@ i {
   }
 
   .product-description {
+    padding-left: 50px;
     max-width: 100%;
   }
 
   .grid-column {
-    max-width: 1200px;
+    max-width: 100%;
     display: grid;
     justify-content: center;
     grid-template-columns: repeat(2, 600px);
     column-gap: 10px;
   }
 
-  .grid-column img {
-    max-width: 600px;
+  .grid-column .display-img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    max-height: 100%;
   }
 
   .btn {
-    width: 3.8rem;
-    height: 1.3rem;
-    font-size: 0.5rem;
+    width: 4.4rem;
+    height: 2rem;
+    font-size: 0.6rem;
   }
 
   .product-description {
@@ -511,7 +593,7 @@ i {
 
   .grid-column h1 {
     display: inline;
-    font-size: 2.7rem;
+    font-size: 3rem;
     padding: 0px;
   }
 
@@ -526,102 +608,20 @@ i {
   }
 
   span {
-    font-size: 1px;
-    padding: 0px;
-  }
-}
-
-
-
-
-
-
-
-
-/*
-@media only screen and (max-width: 390px) {
-
-  nav ul li {
-    display: none;
-  }
-
-  nav ul {
     display: block;
-    text-align: center;
-    padding-top: 10px;
-    padding-right: 0;
+    font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
   }
-
-  nav li {
-    font-size: 0.8rem;
-    padding: 2px;
-  }
-
-  .product-container {
-    display: grid;
-    justify-content: center;
-    max-width: 100%;
-    flex-wrap: wrap;
-  }
-
-  .product-description {
-    max-width: 100%;
-  }
-
-  .grid-column {
-    max-width: 850px;
-    display: grid;
-    grid-template-columns: repeat(2, 180px);
-    column-gap: 10px;
-  }
-
-  .grid-column img {
-
-    max-width: 180px;
-  }
-
-  .btn {
-    width: 3.8rem;
-    height: 1.3rem;
-    font-size: 0.5rem;
-  }
-
-  .product-description {
-    padding-top: 45px;
-  }
-
-  .grid-column h1 {
-    display: inline;
-    font-size: 0.7rem;
-    padding: 0px;
-  }
-
-  .grid-column p {
-    font-size: 0.6rem;
-    padding-top: 5px;
-  }
-
-  i {
-    padding-top: 15px;
-    padding-bottom: 0px;
-  }
-
-  span {
-    font-size: 1px;
-    padding: 0px;
-  }
-
-
-
   .thumbnails {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 10px;
-    padding-top: 0px;
   }
 
   .product-container .thumbnails img {
-    max-width: 70px;
+    max-width: 100px;
   }
 }
-*/
+
+
