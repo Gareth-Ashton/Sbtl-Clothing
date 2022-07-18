@@ -251,7 +251,7 @@ i {
     column-gap: 10px;
   }
 
-  .grid-column img {
+  .grid-column .display-img {
     object-fit: cover;
     max-width: 100%;
     max-height: 80%;
