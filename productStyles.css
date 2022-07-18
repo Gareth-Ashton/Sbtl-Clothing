@@ -245,7 +245,7 @@ i {
   }
 
   .grid-column {
-    max-width: 576px;
+    max-width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 180px);
     column-gap: 10px;
